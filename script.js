@@ -1,5 +1,6 @@
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
+  loopAdditionalSlides: 10,
 
   breakpoints: {
     100: {

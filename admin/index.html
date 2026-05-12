@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toku Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="sidebar-logo">TOKU</div>
+          <div class="sidebar-sub">Admin Panel</div>
+        </div>
+        <nav class="sidebar-nav" id="sidebar-nav"></nav>
+      </aside>
+
+      <main class="main">
+        <div class="topbar">
+          <div class="topbar-page" id="topbar-page">აირჩიეთ გვერდი</div>
+          <div class="topbar-actions">
+            <button
+              class="btn btn-preview"
+              id="btn-preview"
+              onclick="previewPage()"
+              style="display: none"
+            >
+              Preview
+            </button>
+            <button class="btn btn-save" id="btn-save" onclick="savePage()" style="display: none">
+              შენახვა
+            </button>
+          </div>
+        </div>
+        <div class="editor" id="editor">
+          <div class="empty-state">
+            <div class="empty-icon">✦</div>
+            <div class="empty-title">Toku Admin Panel</div>
+            <div class="empty-desc">მარცხენა მენიუდან აირჩიეთ გვერდი</div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Image Picker Modal -->
+    <div
+      class="modal-overlay"
+      id="img-picker-modal"
+      onclick="if (event.target === this) closeImagePicker();"
+    >
+      <div class="modal-box">
+        <div class="modal-header">
+          <span>სურათის არჩევა</span>
+          <div class="modal-header-right">
+            <select
+              id="img-folder-select"
+              class="folder-select"
+              onchange="loadImgFolder(this.value)"
+            ></select>
+            <button class="modal-close" onclick="closeImagePicker()">✕</button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="img-picker-grid" id="img-picker-grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script src="admin.js"></script>
+  </body>
+</html>

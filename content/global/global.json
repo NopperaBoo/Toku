@@ -1,0 +1,100 @@
+{
+  "footer": {
+    "brand": "FRIDAY NIGHT",
+    "address": "ია კარგარეთელის ქუჩა №11.",
+    "phone": "579 14 14 84",
+    "email": "fridaynight@support.com",
+    "facebook": "",
+    "instagram": "",
+    "whatsapp": ""
+  },
+  "nav": {
+    "home_label": "მთავარი",
+    "home_href": "index.html",
+    "crystals_label": "კრისტალები",
+    "crystals_href": "index/crystals/crystals.html",
+    "tarot_label": "ტარო",
+    "tarot_href": "index/tarots/tarots.html",
+    "aromas_label": "არომათერაპია",
+    "aromas_href": "index/aromas/aromas.html",
+    "accessories_label": "აქსესუარები",
+    "accessories_href": "index/accessories/accessories.html"
+  },
+  "friday_night": {
+    "title": "Friday Night კარტების დასტა",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "button_text": "იხილეთ მეტი",
+    "button_href": "./index/tarots/tarots.html"
+  },
+  "swiper": {
+    "defaultImgDir": "accessories",
+    "products": [
+      {
+        "title": "ახალი",
+        "img": "aromas/test2.jpg",
+        "desc": "ф",
+        "sections": []
+      },
+      {
+        "title": "ახალი",
+        "img": "",
+        "desc": "",
+        "sections": []
+      },
+      {
+        "title": "ახალი",
+        "img": "accessories/test3.webp",
+        "desc": "",
+        "sections": []
+      },
+      {
+        "title": "ახალი",
+        "img": "",
+        "desc": "",
+        "sections": []
+      },
+      {
+        "title": "ახალი",
+        "img": "",
+        "desc": "",
+        "sections": []
+      },
+      {
+        "title": "ახალი",
+        "img": "",
+        "desc": "",
+        "sections": []
+      },
+      {
+        "title": "ახალი",
+        "img": "",
+        "desc": "",
+        "sections": []
+      },
+      {
+        "title": "ახალი",
+        "img": "",
+        "desc": "",
+        "sections": []
+      },
+      {
+        "title": "ახალი",
+        "img": "",
+        "desc": "",
+        "sections": []
+      },
+      {
+        "title": "ახალი",
+        "img": "",
+        "desc": "",
+        "sections": []
+      },
+      {
+        "title": "ახალი",
+        "img": "",
+        "desc": "",
+        "sections": []
+      }
+    ]
+  }
+}

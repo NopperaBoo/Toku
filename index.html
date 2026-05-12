@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Toku</title>
+    <meta name="description" content="" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link
       rel="stylesheet"
@@ -352,10 +353,10 @@
           class="d-flex align-items-center justify-content-center flex-column element-link"
         >
           <div
-            class="element air d-flex align-items-center justify-content-center"
+            class="element wind d-flex align-items-center justify-content-center"
           >
             <div class="element-bg"></div>
-            <img class="element-img" src="./img/elements/air.svg" alt="" />
+            <img class="element-img" src="./img/elements/wind.svg" alt="" />
           </div>
           <div class="element-title">ჰაერი</div>
         </a>
@@ -402,7 +403,7 @@
         <div
           class="container-fluid d-flex justify-content-center align-items-center flex-wrap"
         >
-          <div class="zodiac-header">
+          <div class="zodiac-header" id="home-zodiac-header">
             <div class="zodiac-header-bg"></div>
             იპოვე შენი ზოდიაქო
           </div>
@@ -507,7 +508,7 @@
         <div
           class="container-fluid d-flex justify-content-center align-items-center flex-wrap"
         >
-          <div class="planet-header">
+          <div class="planet-header" id="home-planet-header">
             <div class="planet-header-bg"></div>
             იპოვე შენი პლანეტა
           </div>
@@ -579,7 +580,7 @@
 
     <!-- SWIPER  -->
     <div>
-      <div class="swiper-header">აქსესუარები</div>
+      <div class="swiper-header" id="home-accessories-header">აქსესუარები</div>
 
       <div class="swiper-header-gradient">
         <div class="gradietn-ball" style="background-color: #dc1111"></div>
@@ -590,80 +591,8 @@
         <div class="gradietn-ball" style="background-color: #130085"></div>
         <div class="gradietn-ball" style="background-color: #69009b"></div>
       </div>
-
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide c1">
-            <div class="c2"></div>
-            <div class="c2-text">
-              <h3>სათაური</h3>
-              ნივთის აღწერა !!!
-            </div>
-          </div>
-          <div class="swiper-slide c1">
-            <div class="c2"></div>
-            <div class="c2-text">
-              <h3>სათაური</h3>
-              ნივთის აღწერა !!!
-            </div>
-          </div>
-          <div class="swiper-slide c1">
-            <div class="c2"></div>
-            <div class="c2-text">
-              <h3>სათაური</h3>
-              ნივთის აღწერა !!!
-            </div>
-          </div>
-          <div class="swiper-slide c1">
-            <div class="c2"></div>
-            <div class="c2-text">
-              <h3>სათაური</h3>
-              ნივთის აღწერა !!!
-            </div>
-          </div>
-          <div class="swiper-slide c1">
-            <div class="c2"></div>
-            <div class="c2-text">
-              <h3>სათაური</h3>
-              ნივთის აღწერა !!!
-            </div>
-          </div>
-          <div class="swiper-slide c1">
-            <div class="c2"></div>
-            <div class="c2-text">
-              <h3>სათაური</h3>
-              ნივთის აღწერა !!!
-            </div>
-          </div>
-          <div class="swiper-slide c1">
-            <div class="c2"></div>
-            <div class="c2-text">
-              <h3>სათაური</h3>
-              ნივთის აღწერა !!!
-            </div>
-          </div>
-          <div class="swiper-slide c1">
-            <div class="c2"></div>
-            <div class="c2-text">
-              <h3>სათაური</h3>
-              ნივთის აღწერა !!!
-            </div>
-          </div>
-          <div class="swiper-slide c1">
-            <div class="c2"></div>
-            <div class="c2-text">
-              <h3>სათაური</h3>
-              ნივთის აღწერა !!!
-            </div>
-          </div>
-          <div class="swiper-slide c1">
-            <div class="c2"></div>
-            <div class="c2-text">
-              <h3>სათაური</h3>
-              ნივთის აღწერა !!!
-            </div>
-          </div>
-        </div>
+      <div class="swiper mySwiper" id="home-accessories-swiper">
+        <div class="swiper-wrapper" id="home-accessories-slides"></div>
       </div>
 
       <div
@@ -691,22 +620,17 @@
           <div src="" alt="" class="friday-night-img-normal"></div>
         </div>
         <div class="friday-night-textbox">
-          <h2 class="friday-night-title">Friday Night კარტების დასტა</h2>
-
-          <p>
+          <h2 class="friday-night-title" id="fn-title">Friday Night კარტების დასტა</h2>
+          <p id="fn-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
+            aliquip ex ea commodo consequat.
           </p>
         </div>
       </div>
 
-      <a href="./index/tarots/tarots.html"><button class="wish more">იხილეთ მეტი</button></a>
+      <a href="./index/tarots/tarots.html" id="fn-btn-link"><button class="wish more" id="fn-btn">იხილეთ მეტი</button></a>
     </div>
 
     <!-- FOOTER -->
@@ -715,25 +639,49 @@
       class="container-fluid d-flex align-items-center justify-content-center flex-column footer"
       style="min-width: 320px; max-width: 1300px"
     >
-      <div class="footer-left">
-        <div class="footer-links">
-          <a href="" class="footer-link"></a>
-          <a href="" class="footer-link"></a>
-          <a href="" class="footer-link"></a>
+
+
+
+        
+    <div class="site-footer">
+      <div class="footer-brand">
+        <a href="./index.html" class="footer-home">
+          <div class="footer-logo"></div>
+          <div class="footer-title">FRIDAY NIGHT</div>
+        </a>
+        <div class="footer-socials">
+          <a href="" class="social-link social-fb" id="footer-facebook" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="" class="social-link social-ig" id="footer-instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg></a>
+          <a href="" class="social-link social-wa" id="footer-whatsapp" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.816.727 5.461 2.006 7.765L0 32l8.493-2.006A15.922 15.922 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.334A13.29 13.29 0 019.04 27.2l-.373-.213-3.88 1.013 1.04-3.773-.24-.387A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.2-9.866c-.4-.2-2.347-1.16-2.707-1.293-.36-.134-.627-.2-.893.2s-1.027 1.294-1.254 1.56c-.226.267-.453.3-.853.1-2.24-1.12-3.707-2-5.173-4.534-.387-.666.387-.613 1.107-2.053a.733.733 0 00-.033-.693c-.1-.2-.893-2.16-1.227-2.96-.32-.773-.64-.667-.893-.68H11c-.267 0-.693.1-1.053.5-.36.4-1.387 1.36-1.387 3.307s1.42 3.84 1.62 4.106c.2.267 2.786 4.254 6.76 5.974a19.3 19.3 0 002.253.84c.947.307 1.807.267 2.493.16.76-.107 2.347-.96 2.68-1.893.333-.934.333-1.734.233-1.894-.093-.16-.36-.253-.76-.453z"/></svg></a>
         </div>
       </div>
-
-      <div class="footer-right">
-        <div class="footer-number"><a href="">579 14 14 84 </a></div>
-        <div class="footer-destination">
-          <a href="">ია კარგარეთელის ქუჩა №11.</a>
-        </div>
+      <div class="footer-info">
+        <a href="" class="footer-destination" id="footer-address">ია კარგარეთელის ქუჩა №11.</a>
+        <a href="tel:" class="footer-number" id="footer-phone">579 14 14 84</a>
+        <a href="mailto:" class="footer-email" id="footer-email-link">fridaynight@support.com</a>
+      </div>
+    </div>
         <a href="" class="footer-map"></a>
+      </div>
+    </div>
+
+    <!-- Accessories item detail popup -->
+    <div class="item-detail-overlay" id="item-detail">
+      <div class="item-detail-inner">
+        <div class="item-detail-back">← დაბრუნება</div>
+        <div class="item-detail-img"></div>
+        <div class="item-detail-body">
+          <div class="item-detail-title"></div>
+          <div class="item-detail-price"></div>
+          <div class="item-detail-desc"></div>
+          <div class="item-detail-sections"></div>
+        </div>
       </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="script.js"></script>
+    <script src="./js/homepage.js"></script>
   </body>
 </html>

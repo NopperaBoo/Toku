@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "title": "სათაური",
+      "img": "test2.jpg",
+      "price": "11",
+      "sections": [
+        {
+          "header": "აღწერა",
+          "text": "აღწერა"
+        }
+      ]
+    },
+    {
+      "title": "სათაური",
+      "img": "test2.jpg",
+      "price": "22",
+      "sections": [
+        {
+          "header": "აღწერა",
+          "text": "აღწერა"
+        }
+      ]
+    },
+    {
+      "title": "სათაური",
+      "img": "test2.jpg",
+      "price": "33",
+      "sections": [
+        {
+          "header": "აღწერა",
+          "text": "აღწერა"
+        }
+      ]
+    },
+    {
+      "title": "სათაური",
+      "img": "test2.jpg",
+      "price": "44",
+      "sections": [
+        {
+          "header": "აღწერა",
+          "text": "აღწერა"
+        }
+      ]
+    },
+    {
+      "title": "სათაური",
+      "img": "test2.jpg",
+      "price": "55",
+      "sections": [
+        {
+          "header": "აღწერა",
+          "text": "აღწერა"
+        }
+      ]
+    },
+    {
+      "title": "სათაური",
+      "img": "test2.jpg",
+      "price": "66",
+      "sections": [
+        {
+          "header": "აღწერა",
+          "text": "აღწერა"
+        }
+      ]
+    }
+  ]
+}

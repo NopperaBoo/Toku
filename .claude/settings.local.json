@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"d:\\\\MY PROJEECTS\\\\Toku\\\\.github\" -Recurse | Select-Object Name, @{Name=\"Path\";Expression={$_.FullName.Replace\\(\"d:\\\\MY PROJEECTS\\\\Toku\\\\\", \"\"\\)}})",
+      "Bash(Get-ChildItem -Path \"d:\\\\MY PROJEECTS\\\\Toku\" -Recurse -Force)",
+      "Bash(Select-Object FullName)",
+      "Bash(node -e ' *)"
+    ]
+  }
+}

@@ -1,136 +1,20 @@
-const allTarots = document.querySelector(".tarots");
+const allTarots = document.querySelector('.tarots');
 
-const tarots = [
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-  {
-    title: "TAROT",
-    desc: " TAROS SHESAXEB RAME TEQSTI ROMELIC AXSNIS RAS WARMOADGENS TARO",
-    img: "tarot.jpg",
-    pdf: "test.pdf",
-  },
-];
-
-for (let index = 0; index < tarots.length; index++) {
-  const element = tarots[index];
-
-  const template = `
-        <div class="tarot_item">
-        <div class="interact">
-            <div class="tarot_img" style="background: url(../../img/tarots/${element.img}) center"></div>
-            <div class="tarot_desc">${element.desc}</div>
-            <div class="tarot_title">${element.title}</div>
-        </div>
-        <a href='../../pdf/${element.pdf}' download=""  class="tarot_pdf"></a>
-
-        </div>
-    `;
- 
-  allTarots.innerHTML += template;
-}
+fetch('../../content/categories/tarots.json')
+  .then(r => r.json())
+  .then(data => {
+    allTarots.innerHTML = (data.items || []).map((item, i) => {
+      const imgStyle = item.img ? `url(../../img/tarots/${item.img}) center / cover` : '#1a1a1a';
+      return `
+        <div class="tarot_item" onclick="openItemDetail(window._tarotsData[${i}],'../../img/tarots/')">
+          <div class="interact">
+            <div class="tarot_img" style="background:${imgStyle}"></div>
+            <div class="tarot_desc">${item.desc}</div>
+            <div class="tarot_title">${item.title}</div>
+            ${item.price ? `<div class="item-price-badge">${item.price}</div>` : ''}
+          </div>
+        </div>`;
+    }).join('');
+    window._tarotsData = data.items;
+  })
+  .catch(() => {});
