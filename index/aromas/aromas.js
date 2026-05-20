@@ -1,5 +1,7 @@
 const allAromas = document.querySelector('.aromas');
 
+allAromas.innerHTML = Array(6).fill('<div class="skeleton-item"></div>').join('');
+
 fetch('../../content/categories/aromas.json')
   .then(r => r.json())
   .then(data => {

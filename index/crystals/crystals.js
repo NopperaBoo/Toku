@@ -1,5 +1,7 @@
 const allCrystals = document.querySelector('.crystals');
 
+allCrystals.innerHTML = Array(6).fill('<div class="skeleton-item"></div>').join('');
+
 function renderCrystals(crystals) {
   allCrystals.innerHTML = crystals.map((c, i) => {
     const imgStyle = c.img ? `url(../../img/crystals/${c.img}) center / cover` : '#1a1a1a';

@@ -102,22 +102,18 @@ var swiper = new Swiper(".mySwiper", {
 
 const scrollTop = document.querySelector(".scrollTop");
 
-scrollTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+if (scrollTop) {
+  scrollTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
-const scrollVisibility = () => {
-  if (window.scrollY >= 1000) {
-    
-    scrollTop.style.display = "block";
-  } else {
-    scrollTop.style.display = "none";
-  }
-};
+  const scrollVisibility = () => {
+    scrollTop.style.display = window.scrollY >= 1000 ? "block" : "none";
+  };
 
-window.addEventListener("scroll", scrollVisibility);
-
-scrollVisibility();
+  window.addEventListener("scroll", scrollVisibility);
+  scrollVisibility();
+}
 
 
 
@@ -154,9 +150,11 @@ function updateScrollbarColor() {
   });
 }
 
-chakrasContainer.addEventListener('scroll', updateScrollbarColor);
+if (chakrasContainer) {
+  chakrasContainer.addEventListener('scroll', updateScrollbarColor);
 
-window.onload = function() {
-  chakrasContainer.scrollLeft = (chakrasContainer.scrollWidth - chakrasContainer.clientWidth) / 2;
-  updateScrollbarColor();
-};
+  window.onload = function () {
+    chakrasContainer.scrollLeft = (chakrasContainer.scrollWidth - chakrasContainer.clientWidth) / 2;
+    updateScrollbarColor();
+  };
+}

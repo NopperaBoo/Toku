@@ -1,5 +1,7 @@
 const allTarots = document.querySelector('.tarots');
 
+allTarots.innerHTML = Array(6).fill('<div class="skeleton-item"></div>').join('');
+
 fetch('../../content/categories/tarots.json')
   .then(r => r.json())
   .then(data => {

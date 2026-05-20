@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ka">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Friday Night — სულიერი სამყარო. ჩაკრები, ზოდიაქო, კრისტალები, ტარო, არომათერაპია." />
     <title>ლილიტი — Toku</title>
     <link rel="stylesheet" href="../../../css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -11,26 +12,7 @@
     <link rel="stylesheet" href="lilit.css" />
   </head>
   <body class="bg-black">
-    <nav class="navbar navbar-expand-xl navbar-dark bg-black" style="min-width: 320px; max-width: 1400px; z-index: 20">
-      <div class="navbar-bg"></div>
-      <div class="scrollTop"></div>
-      <div>
-        <div class="d-flex justify-content-around" style="max-height: 140px">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse container-fluid" id="navbarSupportedContent">
-          <div><ul class="navbar-nav mb-3 navigation-links">
-            <li class="nav-item"><a class="nav-link" href="../../../index.html">მთავარი</a></li>
-            <li class="nav-item"><a class="nav-link" href="../../crystals/crystals.html">კრისტალები</a></li>
-            <li class="nav-item"><a class="nav-link" href="../../tarots/tarots.html">ტარო</a></li>
-            <li class="nav-item"><a class="nav-link" href="../../aromas/aromas.html">არომათერაპია</a></li>
-            <li class="nav-item"><a class="nav-link" href="../../accessories/accessories.html">აქსესუარები</a></li>
-          </ul></div>
-        </div>
-      </div>
-    </nav>
+    <nav id="main-nav"></nav>
 
     <!-- INTRO -->
     <div class="container-fluid intro">
@@ -153,6 +135,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="../../../js/shared.js"></script>
     <script src="../../../js/bootstrap.bundle.js"></script>
     <script>
       window.CONTENT_CONFIG = { path: '../../../content/planets/lilit.json', type: 'planet' };

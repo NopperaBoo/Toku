@@ -1,5 +1,7 @@
 const allAccessories = document.querySelector('.accessories');
 
+allAccessories.innerHTML = Array(6).fill('<div class="skeleton-item"></div>').join('');
+
 fetch('../../content/categories/accessories.json')
   .then((r) => r.json())
   .then((data) => {
