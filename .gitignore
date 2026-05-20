@@ -1,2 +1,7 @@
 .claude
 node_modules
+.vscode
+.prettierrc
+.prettierignore
+CLAUDE.md
+package-lock.json

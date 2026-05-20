@@ -2,6 +2,7 @@
   "name": "toku",
   "version": "1.0.0",
   "scripts": {
+    "start": "npx serve .",
     "admin": "node admin/server.js"
   },
   "dependencies": {
